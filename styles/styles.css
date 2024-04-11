@@ -26,7 +26,7 @@
     left: 0;
     display: flex;
     justify-content: center;
-
+    z-index: 6;
 }
 
 .lineas-bg{
@@ -73,20 +73,116 @@ main{
     align-items: center;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-h1 {
+.div-1{
+    height: 95%;
+    display: flex;
+    width: 95%;
+    justify-content: start;
+    align-items: end;
+}
+
+
+.div-2{
+    height: fit-content;
+    display: flex;
+    width: 100%;
+
+    justify-content: end;
+    position: absolute;
+    align-items: end;
+    bottom: 0%;
+    right: 0%;
+}
+
+.div-2 div{
+    height: fit-content;
+    display: flex;
+    gap: 1.2rem;
+    width: 25%;
+    border-top-left-radius: 20px;
+    background-color: #FFF;
+    justify-content: start;
+    padding: .65rem 1rem;
+    align-items: center;
+    bottom: 0%;
+}
+
+.div-2 div p{
+    height: fit-content;
+    display: flex;
+    width:70%;
+    justify-content: end;
+    font-family: Neue;
+    font-size: clamp(14px,.95vw,1rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 131%; /* 121.2px */
+    align-items: end;
+    bottom: 0%;
+    
+}
+
+.div-1 h1 {
     color: #FFF;
 text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
 font-family: Neue;
-font-size: clamp(40px,6.5vw,7rem);
+font-size: clamp(40px,6.2vw,6.7rem);
 font-style: normal;
 font-weight: 600;
 line-height: 101%; /* 121.2px */
 z-index: 3;
+width: 70%;
 position: relative;
 }
+
+.div-3{
+    position: absolute;
+    right: 1.5%;
+    bottom: 0%;
+    display: flex;
+    gap: .75rem;
+    align-items: end;
+    justify-content: start;
+}
+
+.div-3 span{
+width: 1px;
+background: #303634;
+display: block;
+height:40px;
+}
+
+.div-btn-quote{
+    position: fixed;
+    z-index: 7;
+    right: 7.5vw;
+    bottom: 11%;
+    padding: .6rem 1rem !important;
+}
+
+.div-btn-quote a{
+
+    padding: 1rem 1.75rem !important;
+}
+
+
+.div-3 p{
+    height: fit-content;
+    display: flex;
+    width:70%;
+    justify-content: end;
+    font-family: Neue;
+    font-size: clamp(14px,.95vw,1rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 131%; /* 121.2px */
+    align-items: end;
+    padding-bottom: 10%;
+    position: relative;
+    }
 
 nav{
     display: flex;
@@ -187,50 +283,37 @@ line-height: 110%; /* 15.4px */
 }
 
 section video {
-    width: 100%; /* Asegúrate de que el video se extienda por todo el contenedor */
-    clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
+    width: 96%; /* Asegúrate de que el video se extienda por todo el contenedor */
+
     position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .section-home1{
-    position: absolute;
+    position: fixed;
     top: 0%;
+    display: flex;justify-content: center;
     width: 100%;
     height: 100vh;
+    left: 0%;
 }
 
-
-.clip-path-container {
-    position: relative;
-/* Ajusta esto según tus necesidades */
-    width: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.clip-path-example {
-    clip-path: url(#custom-clip);
-    -webkit-clip-path: url(#custom-clip); /* Prefijo para Safari */
-    /* Otros estilos como tamaño, posición, etc. */
-
+.element-to-clip {
+    clip-path: url(#custom-clip-path);
   }
-.clip-path-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: inherit;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+
+    .div-2 div{
+        width: 30%;
+        padding: .55rem 1rem;
+    }
 }
 
-.content {
-    position: relative;
-    z-index: 2; /* Asegúrate de que el contenido esté por encima del pseudo-elemento */
-}
 
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -308,3 +391,4 @@ section video {
         display: none;
     }
 }
+
