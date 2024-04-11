@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Neue;
+    src: url('../fonts/Neue.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s ease;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.lineas-bg{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linea-bg-child{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-1{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+#bg-2, #bg-3, #bg-4, #bg-5{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height:6.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+nav section{
+    display: flex;
+    width: 95%;
+}
+
+nav ul{
+    display: flex;
+    width: fit-content;
+    gap: 1rem;
+    justify-content: start;
+    padding: .5rem;
+    align-items: center;
+    border-radius: 10px;
+    background: #FFF;
+    min-height: 43px;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+nav ul img{
+    cursor: pointer;
+}
+
+.img-nav-1{
+    min-width: 35px;
+    width: 2rem;
+    max-width: 4vw;
+    height: auto;
+}
+
+.img-nav-2{
+    min-width: 60px;
+    width:5rem;
+    max-width:27vw;
+    height: auto;
+}
+
+nav ul div{
+    display: flex;
+    width: fit-content;
+    gap: .5rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+nav ul li{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-contact{
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: #14B240;
+    color: white;
+    height: 100%;
+    padding: .5rem ;
+    margin-left: .2rem;
+
+font-family: Neue;
+font-size: clamp(14px,1.05vw,1.15rem);
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 15.4px */
+}
+
+.btn-link{
+    color: #303634;
+    margin-top: .2rem;
+    text-transform: uppercase;
+    font-family: Neue;
+    font-size: clamp(14px,1.05vw,1.15rem);
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110%; /* 15.4px */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    nav div li{
+        display: block !important;
+    }
+
+    nav ul li{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    nav div li{
+        display: block !important;
+    }
+
+    nav ul li{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    nav div li{
+        display: block !important;
+    }
+
+    nav ul li{
+        display: none;
+    }
+}
