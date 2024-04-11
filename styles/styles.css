@@ -174,12 +174,15 @@ line-height: 110%; /* 15.4px */
     line-height: 110%; /* 15.4px */
 }
 
+section video {
+    width: 100%; /* Asegúrate de que el video se extienda por todo el contenedor */
+    clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
+}
+
 
 .clip-path-container {
     position: relative;
-    background-image: url('tu-imagen-aquí.jpg');
-    background-size: cover;
-    height: 500px; /* Ajusta esto según tus necesidades */
+/* Ajusta esto según tus necesidades */
     width: 100%;
     color: white;
     display: flex;
@@ -187,6 +190,12 @@ line-height: 110%; /* 15.4px */
     justify-content: center;
 }
 
+.clip-path-example {
+    clip-path: url(#custom-clip);
+    -webkit-clip-path: url(#custom-clip); /* Prefijo para Safari */
+    /* Otros estilos como tamaño, posición, etc. */
+
+  }
 .clip-path-container::after {
     content: '';
     position: absolute;
