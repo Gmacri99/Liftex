@@ -22,21 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
             onComplete: () => {
                 currentIndex = newIndex;
                 animating = false;
+            },
+            defaults: {
+                duration: .5, // Consider increasing duration for smoother transition
+                ease: "power2.inOut" // Smooth and natural easing
             }
         })
         .to('.section-hero img', {
-            scale: 1.15,
-            opacity: 0,
+
+            opacity: 1,
+            duration: 1,
         },"<")
         .to('.informacion2-hero', {
             y: '10vh',
             opacity: 0,
         },"<")
         .to('.button-fixed', {
-            y: '15vh',
+            y: '12.5vh',
         },"<")
         .to('#h1-title', {
-            x: '75vw',
+            x:'70vw',
             y:'-7.5vh',
             opacity:.3
         },"<")
