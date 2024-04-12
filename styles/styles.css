@@ -75,6 +75,11 @@ main{
     width: 100vw;
     overflow-x: hidden;
 }
+.section-father{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
 
 .div-1{
     height: 95%;
@@ -191,7 +196,7 @@ nav{
     align-items: center;
     height:6.5rem;
     width: 100%;
-    z-index: 1;
+    z-index: 8;
 }
 
 nav section{
@@ -282,29 +287,168 @@ line-height: 110%; /* 15.4px */
     line-height: 110%; /* 15.4px */
 }
 
-section video {
-    width: 96%; /* Asegúrate de que el video se extienda por todo el contenedor */
+.section-hero{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.section-hero img{
     position: absolute;
     top: 0%;
+    width: 98%;
+    left: 0%;
+    height: 97%;
+
+}
+
+.section2-hero{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+
+.section2-hero img{
+    position: absolute;
+    top: 0%;
+    width: 100%;
     left: 0%;
     height: 100%;
-    object-fit: cover;
+
 }
 
-.section-home1{
-    position: fixed;
-    top: 0%;
-    display: flex;justify-content: center;
+.padre-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 95%;
+}
+
+.informacion-hero{
+    position: relative;
+    z-index: 9;
+    height: 85%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: 1rem;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
-    left: 0%;
 }
 
-.element-to-clip {
-    clip-path: url(#custom-clip-path);
-  }
+.informacion-hero h1{
+    color: #FFF;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+    font-family: Neue;
+    font-size: clamp(30px,5.5vw,6rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101%; /* 37.37px */
+}
 
+
+.informacion-hero p{
+    color: #FFF;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+    font-family: Neue;
+    font-size: clamp(17px,1.1vw,1.15rem);
+    font-style: normal;
+    font-weight: 400;
+    width: 30%;
+    line-height: 131%; /* 37.37px */
+}
+
+.informacion2-hero{
+    position: relative;
+    z-index: 9;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    width: 33.5%;
+}
+
+.informacion1-div2{
+    display: flex;
+    width: 85%;
+    height: 13%;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.informacion1-div2 svg{
+    width: auto;
+    height: 40px;
+}
+
+.button-fixed{
+    position: fixed;
+    z-index: 10;
+    bottom: 20%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: #14B240;
+    color: white;
+    width: 264px;
+    height: 68px;
+    padding: 8px;
+font-family: Neue;
+font-size: clamp(14px,1.05vw,1.15rem);
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 15.4px */
+}
+
+.informacion1-div2 p{
+    color: #303634;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+    font-family: Neue;
+    font-size: clamp(14px,1.2vw,1.25rem);
+    font-style: normal;
+    width: 100%;
+    font-weight: 550;
+    line-height: 130%; /* 37.37px */
+}
+
+.informacion2-div2{
+    display: flex;
+    align-items: start;
+    gap: .5rem;
+    height: 10%;
+}
+
+.informacion2-div2 span{
+    display: block;
+    width: 1px;
+    height: 119px;
+    background-color: #303634;
+}
+
+.informacion2-div2 p{
+    color: #303634;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+    font-family: Neue;
+    font-size: clamp(14px,1.1vw,1.15rem);
+    font-style: normal;
+    width: 80%;
+    padding-top:.5rem ;
+    font-weight: 500;
+    line-height: 130%; /* 37.37px */
+}
+  
   
 @media screen and (min-width: 1280px) and (max-width: 1440px) {
 
@@ -326,6 +470,15 @@ section video {
         display: none;
     }
 
+    .section-hero img{
+
+        height: 80%;
+    
+    }
+
+    .informacion-hero{
+        height:55%;
+    }
     
     .lineas-bg{
         width: 95%;
@@ -346,6 +499,16 @@ section video {
 
     nav div li{
         display: block !important;
+    }
+
+    .section-hero img{
+
+        height: 90%;
+    
+    }
+
+    .informacion-hero{
+        height:75%;
     }
 
     nav ul li{
@@ -369,6 +532,19 @@ section video {
 }
 
 @media screen and (max-width: 479px) {
+
+    
+.section-hero img{
+ 
+    width: 100%;
+    height: 95%;
+
+}
+
+.informacion-hero{
+    height: 65%;
+}
+
 
     nav div li{
         display: block !important;

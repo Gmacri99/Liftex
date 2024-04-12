@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = gsap.utils.toArray('.section');
+    const sections = gsap.utils.toArray('section');
     let currentIndex = 0; // Current visible section index
     let animating = false; // Animation in progress flag
     console.log(sections)
     sections.forEach((section, index) => {
         // Initialize all sections off-screen except the first
-        if (index !== 0) gsap.set(section, { yPercent: 100, opacity: 0 });
+      
     });
 
     function animateSections(newIndex) {
@@ -24,18 +24,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 animating = false;
             }
         })
-        .to('#section1 svg', {
-    
+        .to('.section-hero img', {
+            scale: 1.15,
             opacity: 0,
-        })
-        .fromTo('#section2', {
-            yPercent: direction * 100,
+        },"<")
+        .to('.informacion2-hero', {
+            y: '10vh',
             opacity: 0,
-        }, {
-            yPercent: 0,
+        },"<")
+        .to('.button-fixed', {
+            y: '15vh',
+        },"<")
+        .to('#h1-title', {
+            x: '75vw',
+            y:'-7.5vh',
+            opacity:.3
+        },"<")
+        .fromTo('.section2-hero', {
             opacity: 1,
-            immediateRender: false
-        }, "<");
+        }, {
+
+            opacity: 1,
+        },"<")
+        
+        
     }
 
     window.addEventListener('wheel', function(event) {
